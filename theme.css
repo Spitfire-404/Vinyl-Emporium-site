@@ -1,0 +1,428 @@
+*{
+    color:lightblue;
+}
+
+ul.Navbar{
+    place-items: center;
+    list-style-type: none;
+    justify-self: center;
+    padding: 0;
+    align-self: center;
+
+
+
+    margin: 0;
+
+    height: 40px;
+    z-index: 3;
+
+
+
+}
+ol{
+    /* turning a ordered list into an unordered list lol */
+    list-style-type:circle;
+}
+ol li{
+    color: lightslategrey;
+}
+
+ul.Navbar *{
+    z-index: 10;
+}
+.title div{
+    display: block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    backdrop-filter: blur(2px);
+
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 2px black solid;
+    border-radius: 0 0 20px 20px;
+}
+
+@font-face {
+  font-family: tuffFont; /* set name */
+  src: url(fonts/Audiowide-Regular.ttf); /* url of the font */
+}
+
+@font-face {
+  font-family: racingFont; /* set name */
+  src: url(fonts/RacingSansOne-Regular.ttf); /* url of the font */
+}
+
+@font-face {
+  font-family: geoFont; /* set name */
+  src: url(fonts/Geo-Regular.ttf); /* url of the font */
+}
+
+.title h1{
+    font-family: tuffFont;
+    display:contents;
+    color: steelblue;
+
+
+
+    padding: 0;
+    margin: 0;
+}
+
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+
+  }
+}
+@keyframes animateSize{
+    from{
+        background-size: 40px;
+
+    }
+    to{
+        background-size: 44px;
+
+    }
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url(triTile.png) ;
+    background-repeat: repeat;
+    background-size: 40px ;
+
+    animation: animatedBackground 600s linear infinite, animateSize 60s ease-in-out infinite alternate;
+
+
+}
+header ul.Navbar li{
+    display: inline-block;
+    vertical-align:top;
+
+
+
+}
+header ul.drop li{
+    display: block;
+
+}
+header button, header details{
+    margin: 10;
+    padding: 2;
+}
+header{
+    margin: 0;
+    justify-self: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+
+/*
+    stole a lot of this from the google api: https://developer.chrome.com/blog/styling-details#demo_3
+*/
+summary{
+    transition: all 0.5 ease;
+    cursor: pointer;
+    display: flex;
+    color: wheat;
+
+    &::marker {
+      content: "";
+      justify-self: end;
+    }
+    &::after {
+      content: "";
+      background-image: url("arrow.png");
+      filter: grayscale();
+
+      transform-origin: 50%, 50%;
+      background-size: cover;
+      width: 20px;
+      transform: rotate(90deg);
+      transition: transform 0.5s ease;
+    }
+    [open] &::after {
+        transform: rotate(-90deg);
+
+    }
+
+
+}
+
+
+::details-content {
+    transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
+    height: 0;
+    overflow: clip;
+}
+
+:root {
+        interpolate-size: allow-keywords;
+    }
+
+    [open]::details-content {
+        height: auto;
+}
+
+
+details{
+    padding: 20px;
+    margin: 0;
+    justify-self: center;
+
+
+}
+details ul{
+    align-items: normal;
+    padding: 0;
+
+    align-content: center;
+}
+details a{
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+
+
+
+}
+summary{
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.Nav {
+
+    color: wheat;
+    background: none;
+    background: linear-gradient(180deg, rgba(150, 200, 255, 0.7) 1%, rgba(0, 0, 0, 0.1) 70%, rgba(30, 26, 0, 0.1) 100%);
+
+
+    border: lightslategrey 2px solid;
+    border-radius: 10px;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 5px;
+
+
+
+}
+
+a, .Nav{
+    display: block;
+    backdrop-filter: blur(1px);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 100%;
+    color: wheat;
+    position:relative;
+    z-index: 10;
+    transition:
+    color 0.5s ease-in,
+    border-radius 0.2s ease,
+    backdrop-filter 0.2s linear;
+    &:active{
+
+        border-radius: 0;
+
+    }
+
+
+    &:hover{
+        color: #666;
+        backdrop-filter: blur(4px);
+
+
+   }
+
+}
+summary{
+    transition:
+    color 0.5s ease-in,
+    border-radius 0.2s ease,
+    backdrop-filter 0.2s linear;
+    color: wheat;
+    padding: 0;
+    margin: 0;
+
+    background-color: transparent;
+    &:hover{
+        color: #666;
+
+
+   }
+}
+*{
+    min-width: 30px;
+
+}
+.content{
+    backdrop-filter: blur(2px);
+    margin: 0;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 20px 20px 0 0;
+    border: 2px slategray solid;
+
+    z-index: 0;
+
+}
+div.content{
+    padding: 10px;
+    padding-right: 30px;
+    margin: 10px;
+}
+.content table {
+    margin: 10px;
+}
+.content th, .content td , h2{
+    max-height: 300px;
+
+    margin: 5px;
+    font-family: racingFont;
+}
+.content th, h2{
+    font-size: 40pt;
+    color: steelblue;
+    width: 100%;
+}
+.content td{
+
+    vertical-align: top;
+    font-size: 14pt;
+    text-justify: auto;
+    width: 100%;
+    max-height: 300px;
+    line-height: 24pt;
+
+}
+.content td img{
+    width: 300px;
+
+    border: darkred 3px dashed;
+    border-radius: 10px;
+}
+.content th img{
+    width: 200px;
+
+    border: darkred 3px dashed;
+    border-radius: 10px;
+}
+.content .checkout{
+    width: 200px;
+
+    border:none;
+    border-radius: 10px;
+}
+.scrollWraper{
+    overflow-x: auto;
+    max-height: var(--size);
+    scrollbar-color: #148 steelblue;
+    scrollbar-width:thin;
+
+
+}
+
+b{
+    text-decoration:orange underline;
+    color:rgb(186, 190, 206);
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    padding: 10px;
+
+    backdrop-filter: invert() blur(2px) brightness(0.8);
+
+    margin: 0;
+}
+footer *{
+    color:  darkslateblue;
+    font-family: geoFont;
+
+}
+.content li{
+    font-family: racingFont;
+    font-size: 15pt;
+    font-weight: normal;
+    color: slategray;
+}
+footer p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+table {
+    align-items: center;
+    width: 100%;
+    border:1px solid dimgray;
+    border-radius: 20px;
+    padding: 5px;
+    padding-bottom: 20px;
+}
+th{
+    width:  50%;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+}
+td{
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 1px;
+    font-size: 15pt;
+    font-family: geoFont;
+}
+
+footer a, footer p{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+
+    line-height: 20pt;
+
+}
+
+footer a, li a{
+    display: inline;
+    text-decoration: underline;
+}
+header a{
+    text-decoration: none;
+}
+
+
+
+
+/* hopefully you dont see this */
+p.replace{
+    text-decoration: underline;
+    backdrop-filter: blur(5px);
+    color: red;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    font-size: 200%;
+
+    justify-self:center;
+}
